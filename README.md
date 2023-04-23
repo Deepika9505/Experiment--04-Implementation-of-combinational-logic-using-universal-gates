@@ -31,13 +31,53 @@ F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 ## Program:
 /*
 Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-## RTL realization
 
+PROGRAM 1:
+module expfour(a,b,c,d,f);
+input a,b,c,d;
+output f;
+wire f,f2,f3;
+assign f1 = (~c&~b&~a);
+assign f2 = (~d&~c&~a);
+assign f = (c&~(~b)&~a);
+assign f = f1&~f2&`f3;
+endmoudule
+
+PROGRAM 2;
+module expfourtwo(a,b,c,d,f);
+input f;
+wire f1,f2,f3,f4;
+assign f1 = c&(~b)&a;
+assign f2 = d&(~c)&a;
+assign f3 = c&(~b)&a;
+assign f4 = ~(f1|f2|f3);
+not(f,f4);
+endmodule
+
+Developed by:K.DEEPIKA
+RegisterNumber:212222050009  
+*/
+
+## RTL realization
 ## Output:
 ## RTL
+PROGRAM 1
+![rrp1](https://user-images.githubusercontent.com/128984662/233822341-bf01ed6b-e73d-4b27-a7b6-80ada1337892.jpeg)
+PROGRAM 2
+![rrp2](https://user-images.githubusercontent.com/128984662/233822372-edc4aa77-5c62-4a60-bab8-7a2b09f61c89.jpeg)
+
+##TruthTable
+PROGRAM 1
+![ttp1](https://user-images.githubusercontent.com/128984662/233822453-08381a31-4b87-4be1-b84b-fc5bec2b89fe.jpeg)
+PROGRAM 2
+![ttp2](https://user-images.githubusercontent.com/128984662/233822460-a2419e13-7861-470f-82ba-116ce1fc0e6e.jpeg)
+
 ## Timing Diagram
+PROGRAM 1
+![tdp1](https://user-images.githubusercontent.com/128984662/233822472-0d3f6de2-2ae1-425c-b4b5-c7431ab95f37.jpeg)
+PROGRAM 2
+![tdp2](https://user-images.githubusercontent.com/128984662/233822485-5acb770e-317a-4f95-b84e-c2a17e28f966.jpeg)
+
+
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
