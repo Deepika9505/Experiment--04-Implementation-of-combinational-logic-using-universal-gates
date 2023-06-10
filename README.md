@@ -33,25 +33,43 @@ F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
 
 PROGRAM 1:
+
 module expfour(a,b,c,d,f);
+
 input a,b,c,d;
+
 output f;
+
 wire f,f2,f3;
+
 assign f1 = (~c&~b&~a);
+
 assign f2 = (~d&~c&~a);
+
 assign f = (c&~(~b)&~a);
+
 assign f = f1&~f2&`f3;
+
 endmoudule
 
 PROGRAM 2;
+
 module expfourtwo(a,b,c,d,f);
+
 input f;
+
 wire f1,f2,f3,f4;
+
 assign f1 = c&(~b)&a;
+
 assign f2 = d&(~c)&a;
+
 assign f3 = c&(~b)&a;
+
 assign f4 = ~(f1|f2|f3);
+
 not(f,f4);
+
 endmodule
 
 Developed by:K.DEEPIKA
@@ -77,7 +95,6 @@ PROGRAM 1
 ![tdp1](https://user-images.githubusercontent.com/128984662/233822472-0d3f6de2-2ae1-425c-b4b5-c7431ab95f37.jpeg)
 PROGRAM 2
 ![tdp2](https://user-images.githubusercontent.com/128984662/233822485-5acb770e-317a-4f95-b84e-c2a17e28f966.jpeg)
-
 
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
